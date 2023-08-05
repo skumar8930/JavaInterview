@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-       // Sorting.sortEmployee();
-       Sorting.sortEmployeeHashMap();
+       // Sorting.sortEmployeeList();
+      // Sorting.sortEmployeeHashMap();
+       //Sorting.sortArray();
+
+        Sorting.sortingWithoutUsingInbuildFunction();
     }
 }
