@@ -1,6 +1,29 @@
+package model;
+
+import java.util.Objects;
 
 public class Employee {
     private Integer id;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) && Objects.equals(name, employee.name) && Objects.equals(age, employee.age) && Objects.equals(salary, employee.salary) && Objects.equals(department, employee.department);
+
+   /*  To search custom ,object in the list we need to override equals method
+   *
+   *  */
+
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age, salary, department);
+    }
+
     private String name;
     private Integer age;
     private Integer salary;
@@ -57,7 +80,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "model.Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +

@@ -1,0 +1,103 @@
+Lambda expression:
+It is the short way to define the body of functional interface abstract method.
+
+example:
+package java8.interfaces;
+@FunctionalInterface
+
+public interface CalculateSquare {
+    Double square(Double x);
+}
+
+Now we can implement tha square method in any class direcltly as below.
+
+ public static void implementsCalculateSquare(){
+       // CalculateSquare  c1= (x)->{ return x*x ;};
+       // CalculateSquare c2 = (x)->  x*x;
+        CalculateSquare c3 = x->  x*x;// here x is the value which we will pass in square method
+        System.out.println(c3.square(2.0));
+
+    }
+
+    2. example
+    ===
+
+    package java8.interfaces;
+    @FunctionalInterface
+    public interface CompareTwoNumber {
+        Integer compareTwoNumber(Integer a, Integer b);
+
+    }
+    Uses
+    =======
+      public static void implementcompareTwoNumber() {
+            CompareTwoNumber compareTwoNumber =( a, b)->{
+            if (a > b) {
+                return a;
+            } else
+                return b;
+        };//semicolon required because lambda expression is inline expression
+
+            System.out.println(compareTwoNumber.compareTwoNumber(2,5));
+        }
+
+Functional interface :
+==========================================
+Functional interface is a intefce which have only one abstrat method and it may have multiple static and default method.
+@FunctionalInterface annotation is optional for for functional interface. if there is more than one abstract method in interface
+then it is not functional interface.
+Functional interface is the target of labda expression, lambda expression is used to define the abstract method body.
+The argument of  different method of stream Api having any functionl interface type, so that we can use
+lambda expression for that.
+lambda expression return type is functionla interface type.
+
+Some functional interfaces define in java 8
+1. Predicate
+2.Function
+3.Consumer
+4.Supplier
+5.Comprator
+
+
+
+1. Predicate
+======================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+There is two type of operation in java-8
+1. Intermediate operation
+2. Terminal operation
+
+Intermediate operation results is again stream  of list.
+example,
+
+filter()
+map()
+flatmap()
+distinct()
+sorted()
+peek()
+limit()
+skip()
+
+In Terminal operation we are not getting stream of list , it give us a single result.
+
+

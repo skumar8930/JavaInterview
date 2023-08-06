@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Sorting done!!">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="changed java8 to java 20">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/AlllMethodsUseseExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/Lambda/LambdaUese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/interfaces/CalculateSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/interfaces/CompareTwoNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/java-8 notes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/searching/SearchCustomObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/Sorting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,11 +49,12 @@
     "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/91752/Desktop/SpringBoot/swagger",
     "settings.editor.selected.configurable": "Lombok"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaInterview" />
@@ -50,9 +62,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchCustomObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="searching.SearchCustomObject" />
+      <module name="JavaInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="searching.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SearchCustomObject" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691252308637</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed java8 to java 20">
+      <created>1691325877934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691325877934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,7 +145,8 @@
     <MESSAGE value="Employee list created" />
     <MESSAGE value="Employee list Sorted simple and as Map" />
     <MESSAGE value="Sorting done!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorting done!!" />
+    <MESSAGE value="changed java8 to java 20" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed java8 to java 20" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

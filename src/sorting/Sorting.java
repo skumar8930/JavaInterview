@@ -1,3 +1,8 @@
+package sorting;
+
+import list.EmployeeList;
+import model.Employee;
+
 import java.util.*;
 
 public class Sorting {
@@ -26,8 +31,8 @@ public class Sorting {
 
     public static void sortEmployeeHashMap(){
       Map<Integer,Employee> map=  EmployeeList.getEmployeeMap();
-    //  Set<Map.Entry<Integer,Employee>> mapEntry= map.entrySet();
-        List<Map.Entry<Integer,Employee>> mapEntry = new ArrayList<>(map.entrySet());
+    //  Set<Map.Entry<Integer,model.Employee>> mapEntry= map.entrySet();
+        List<Map.Entry<Integer, Employee>> mapEntry = new ArrayList<>(map.entrySet());
         //sort by value
       //  mapEntry.sort((entry1,entry2)->entry1.getValue().getId().compareTo(entry2.getValue().getId()));
 
