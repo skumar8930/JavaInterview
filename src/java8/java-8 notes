@@ -62,6 +62,46 @@ Some functional interfaces define in java 8
 
 1. Predicate
 ======================
+Predicate is a single argument function which return true or false based on the condition.
+methods.
+boolean test(T t) is theone abstract method.
+there is 3 default method
+default Predicate or(Preficate  p) --Logical OR
+default Predicate and(Preficate  p) --Logical AND
+default Predicate negate(Preficate  p) --Logical NOT it reverse the Predicate
+one static method
+static isEqual(Object targetRef)
+
+example of Predicate
+
+1. Predicate<Employee> p1= e-> e.getSalary()>20000;
+2. Predicate<Employee> p2= e-> e.getSalary()<30000;
+3. Predicate<Employee> p3= p1.and(p2);// return true if p1 and p2 are true
+
+ ===================================================================
+
+ 2.Function interface
+
+ It reperent a function which takes in one argument and produces a result, it does not return boolean value like Predicate.
+ Methods:-
+ ---------
+ R apply(T t) abstract method
+
+ other methods
+ .............
+Function andThen(Function f)
+Function compose(Functiojn f)
+Function identity():-  identity is a static method of Function interface that returns a Function that always returns its input argument.
+
+
+// some Question for practice
+ //https://blog.devgenius.io/java-8-coding-and-programming-interview-questions-and-answers-62512c44f062
+
+
+
+
+
+
 
 
 
