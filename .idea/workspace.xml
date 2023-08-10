@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="changed java8 to java 20">
-      <change afterPath="$PROJECT_DIR$/src/StringPrograms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/GroupingExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/interfaces/PredicateExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/AlllMethodsUseseExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/AlllMethodsUseseExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/java-8 notes" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/java-8 notes" afterDir="false" />
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Practice done on java-8 EmployeeObject.">
+      <change beforePath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691325877934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Practice done on java-8 EmployeeObject.">
+      <created>1691673798798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691673798798</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +190,8 @@
     <MESSAGE value="Employee list Sorted simple and as Map" />
     <MESSAGE value="Sorting done!!" />
     <MESSAGE value="changed java8 to java 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed java8 to java 20" />
+    <MESSAGE value="Practice done on java-8 EmployeeObject." />
+    <option name="LAST_COMMIT_MESSAGE" value="Practice done on java-8 EmployeeObject." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
