@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Refrences Attached for java-8&#10; Practice">
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Read file program added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaInterview.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaInterview.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringPrograms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringPrograms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MatrixProblems">
-    <configuration name="GroupingExample (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.GroupingExample" />
-      <module name="JavaInterview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.StringPrograms">
     <configuration name="GroupingExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java8.GroupingExample" />
       <module name="JavaInterview" />
@@ -101,13 +88,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringPrograms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StringPrograms" />
+      <module name="JavaInterview" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringPrograms" />
         <item itemvalue="Application.MatrixProblems" />
         <item itemvalue="Application.ReadFile" />
         <item itemvalue="Application.PracticeOnEmployeeObject" />
         <item itemvalue="Application.GroupingExample" />
-        <item itemvalue="Application.GroupingExample (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +192,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/StringPrograms.java</url>
-          <line>13</line>
+          <line>1</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
