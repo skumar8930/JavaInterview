@@ -18,19 +18,25 @@ public class StringPrograms {
         //System.out.println(maximumOccuringChar("sandeep sandeeppppp pp"));
         //frequencyOfEachChar();
         //reverseString();
-        // printDuplicateChar();
+       // printDuplicateChar();
+        //removeAllDuplicateChaFromStringWithSpace();
+        // removeDuplicatesExceptSpace();
+        //removeAllduplicatewordsFromString();
         //checktwoStringAngramorNot();
         //checkOnlyDigitInString();
-        countNumberOfVowelsAndConsonentInString();
+       // countNumberOfVowelsAndConsonentInString();
+        //printMaximumOccuringCharInString();
+       // printMaximumOccuringWordInString();
+       // frequencyOfEachCharUsingJava8();
+        frequencyOfEachWord();
 
     }
-
-    /* String program to find frequency of each  character in String
+//=======================================*************String program to find frequency of each  character in String*********============================
+    /*
      * 1. remove all space to remove all space split the string from space and concatinate the array String
      * now create a hash map and put each char, if it persent then increase its occurance else put and
      * and create its occurance 1
      * */
-
     public static void frequencyOfEachChar(){
 
 
@@ -62,23 +68,18 @@ public class StringPrograms {
         System.out.println( map.values().stream().max((Integer::compareTo)).get());
 
     }
+    public static void frequencyOfEachCharUsingJava8(){
+        String str="abcdefabc";
+        Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().forEach(System.out::println);
+    }
 
-
-    /* public  static char  maximumOccuringChar(String str) {
-         return str.chars().mapToObj(x -> (char) x)                  // box to Character
-                 .collect(groupingBy(x -> x, counting()))  // collect to Map<Character, Long>
-                 .entrySet().stream()
-                 .max(comparingByValue())                  // find entry with largest count
-                 .get()                                    // or throw if source string is empty
-                 .getKey();
-     }*/
+    //=======================================*************String program to find frequency of each  word in String*********============================
+    public static void frequencyOfEachWord(){
+        String str="abc abc xyz xyz mno";
+        Stream.of(str.split(" ")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().forEach(System.out::println);
+    }
     public  static char  maximumOccuringChar(String str) {
-        return str.chars().mapToObj(x -> (char) x)                  // box to Character
-                .collect(groupingBy(x -> x, counting()))  // collect to Map<Character, Long>
-                .entrySet().stream()
-                .max(comparingByValue())                  // find entry with largest count
-                .get()                                    // or throw if source string is empty
-                .getKey();
+        return str.chars().mapToObj(x -> (char) x).collect(groupingBy(x -> x, counting())).entrySet().stream().max(comparingByValue()).get().getKey();
     }
 
     //reverse String
@@ -135,10 +136,7 @@ public class StringPrograms {
 
     }
 
-    //=======================================================
-
-    // // How do you print duplicate characters from a string?
-
+    //=======================================================// How do you print duplicate characters from a string?=======================================
     public static void printDuplicateChar(){
         /*
          * get stream of char by spliting string ""
@@ -147,35 +145,66 @@ public class StringPrograms {
          * now get the list of key only
          * */
         String str= "abccc dd ee gg f";
-        Arrays.asList(str.split("")).stream().collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream()
-                .filter(entry->entry.getValue()>1).map(Map.Entry::getKey).forEach(System.out::println);
+        Arrays.asList(str.split("")).stream().collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().filter(entry->entry.getValue()>1).map(Map.Entry::getKey).forEach(System.out::println);
     }
 
-    //===============================================================
+    //===============================================================//Remove all duplicate char including space from string================================
+    public  static void removeAllDuplicateChaFromStringWithSpace() {
+       String str = "abc zbc xbc";
+      System.out.println(Stream.of(str.split("")).distinct().collect(Collectors.joining()));
 
-    // How do you check if two strings are anagrams of each other?
+   }
+   //=========================================================================== //Remove all duplicates except space========================================
+    public static void removeDuplicatesExceptSpace(){
+        String str = "abc zbc xbc";
+        AtomicReference<String> result = new AtomicReference<>("");
+        String c="v";
+        Stream.of(str.split("")).forEach(x -> {
+            if(!result.get().contains(x)) {
+                result.set(result+x);
+            }
+            else if(x.equals(" ")) {
+                result.set(result+x);// result= result+x;
+            }
+
+        });
+        System.out.println(result);
+     /*   String input="abc zbc xbc";
+        String result = "";
+        for (int i = 0; i < input.length(); i++) {
+            if(!result.contains(String.valueOf(input.charAt(i)))) {
+                result += String.valueOf(input.charAt(i));
+            }
+            else if(input.charAt(i)==' '){
+                result += String.valueOf(input.charAt(i));
+
+            }
+        }
+        System.out.println(result);*/
+    }
+    //========================================================================= // remove all duplicate words from string========================================
+    public static void removeAllduplicatewordsFromString(){
+        String str= "hello how are you   hello you";
+       System.out.println(Stream.of(str.split("\\s+")).distinct().collect(Collectors.joining(" ")));
+    }
+
+    //============================================================================// How do you check if two strings are anagrams of each other?======================
     /*
      * An anagram of a string is another string that contains the same characters,
      * only the order of characters can be different.
      * For example, “abcd” and “dabc” are an anagram of each other.
-     *
-     *
-     *
      * */
-
+    /*solution
+     * sort both string
+     * both content should be equal
+     * */
     public static void checktwoStringAngramorNot(){
-        /*
-         * sort both string
-         * both content should be equal
-         * */
-
         String str1="abcde";
         String str2="dabc";
         if(str1!=null &&str2!=null && !str1.equals("")&& !str2.equals("")) {
             str1 = Stream.of(str1.split("")).sorted().collect(Collectors.joining());
             str2 = Stream.of(str2.split("")).sorted().collect(Collectors.joining());
         }
-
         // we can sort as below also
         // String str1Sorted= str1.chars().sorted().mapToObj(i->String.valueOf((char)i)).collect(Collectors.joining());
         //String str2Sorted= str2.chars().sorted().mapToObj(i->String.valueOf((char)i)).collect(Collectors.joining());
@@ -186,21 +215,16 @@ public class StringPrograms {
         else
             System.out.println("Both string is not angram to each other");
     }
-
-    //How do you check if a string contains only digits
+//==================================================== //How do you check if a string contains only digits==================================================
     public static void checkOnlyDigitInString(){
         String str="123";
         if(Pattern.compile("[0-9]+").matcher(str).matches()){
             System.out.println("String contain only digit");
         }
-        else
-            System.out.println("String contain not only digit");
+        else System.out.println("String contain not only digit");
 
     }
-
-    //==================================================================
-
-    //How do you count a number of vowels and consonants in a given string?
+    //==================================================================//How do you count a number of vowels and consonants in a given string?========================
     public static void countNumberOfVowelsAndConsonentInString(){
         //vowels = aeiou
         //rest consonent
@@ -209,10 +233,23 @@ public class StringPrograms {
        Long totalConsonent= Arrays.asList(str.split("")).stream().filter(c-> !c.equals(" ") && !Pattern.compile("[aeiouAEIOU]").matcher(c).matches() ).count();
        System.out.println("Number of vowels= "+vowels_count);
        System.out.println("Number of Consonent= "+totalConsonent);
-
-
-
     }
+    //=================================================write a program to print maximum occuring char===============================================
+    public static void printMaximumOccuringCharInString(){
+        String str="abccc   dddd eeeeee";
+       String maxOccuringChar= Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+       System.out.println(maxOccuringChar);
+    }
+
+    //=================================================write a program to print maximum occuring word===============================================//
+    public static void printMaximumOccuringWordInString(){
+        String str="abc abc def jkl jkl jkl";
+        String maxOccuringChar= Stream.of(str.split(" ")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+        System.out.println(maxOccuringChar);
+    }
+
+//=================================================================================================================================================
+
 
 
 }

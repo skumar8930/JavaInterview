@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Read file program added">
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="String programs added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StringPrograms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringPrograms.java" afterDir="false" />
     </list>
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691673978933</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="String programs added">
+      <created>1692118110128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692118110128</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,7 +192,8 @@
     <MESSAGE value="changed java8 to java 20" />
     <MESSAGE value="Practice done on java-8 EmployeeObject." />
     <MESSAGE value="Refrences Attached for java-8&#10; Practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refrences Attached for java-8&#10; Practice" />
+    <MESSAGE value="String programs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="String programs added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
