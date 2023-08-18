@@ -89,7 +89,7 @@
       </method>
     </configuration>
     <configuration name="StringPrograms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StringPrograms" />
+      <option name="MAIN_CLASS_NAME" value="java8.StringPrograms" />
       <module name="JavaInterview" />
       <method v="2">
         <option name="Make" enabled="true" />
