@@ -2,13 +2,12 @@
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
-        import java.util.regex.Pattern;
-        import java.util.stream.Collectors;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-        import static java.util.Map.Entry.comparingByValue;
-        import static java.util.stream.Collectors.counting;
-        import static java.util.stream.Collectors.groupingBy;
+import static java.util.Map.Entry.comparingByValue;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 
 public class StringPrograms {
     //string programs
@@ -18,17 +17,23 @@ public class StringPrograms {
         //System.out.println(maximumOccuringChar("sandeep sandeeppppp pp"));
         //frequencyOfEachChar();
         //reverseString();
+       // reverseEachWordsOfString();
+       // checktwoStringPalindromeOrNot();
        // printDuplicateChar();
         //removeAllDuplicateChaFromStringWithSpace();
         // removeDuplicatesExceptSpace();
         //removeAllduplicatewordsFromString();
+       // removeGivenCharFromString();
         //checktwoStringAngramorNot();
         //checkOnlyDigitInString();
        // countNumberOfVowelsAndConsonentInString();
+        countNumberOfWordsInString();
         //printMaximumOccuringCharInString();
        // printMaximumOccuringWordInString();
        // frequencyOfEachCharUsingJava8();
-        frequencyOfEachWord();
+       // frequencyOfEachWord();
+       // removecharsFromFirstWhichPersentInSecondString();
+        //firstNonrepeatingCharInString();
 
     }
 //=======================================*************String program to find frequency of each  character in String*********============================
@@ -88,7 +93,7 @@ public class StringPrograms {
 
         String str="Hello";
 
-       /*String reve =  Stream.of(str.split("")).reduce("",(reversed,character)->character+reversed);
+      /* String reve =  Stream.of(str.split("")).reduce("",(reversed,character)->character+reversed);
        System.out.println(reve);*/
 //------------------------------------------------------------------------------------------------------------
 
@@ -248,8 +253,61 @@ public class StringPrograms {
         System.out.println(maxOccuringChar);
     }
 
-//=================================================================================================================================================
+//===========================================*********** How to remove characters from the first String which are present in the second******======================
+    public static void removecharsFromFirstWhichPersentInSecondString(){
+        String first="abcdefghi af ";
+        String second ="afi";
+        String revoved = Stream.of(first.split("")).filter(x->!second.contains(x)).collect(Collectors.joining());
+        System.out.println("Before removed char = "+first+" After removed chars = "+revoved);
+
+    }
 
 
+//================================================================find first non-repeating char(unique char) in string =================================================================================================
+
+    // there are some character in string which are unique so find first unique character
+    //Hash map does not maintain insertion orde
+    //Linked Hash map maintain insertion order
+    public static void firstNonrepeatingCharInString() {
+        String str = "abdab  lmld";
+        String firstUniqueChar = Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, counting())).entrySet().stream().filter(x -> x.getValue() == 1).findFirst().get().getKey();
+        System.out.println(firstUniqueChar);
+    }
+
+//=====================================================How to reverse the words in a given String sentence?====================================
+    public static void reverseEachWordsOfString(){
+        String str= "How are you";
+        System.out.println(Stream.of(str.split("\\s+")).map(words->new StringBuilder(words).reverse()).collect(Collectors.joining(" ")));
+    }
+
+
+//=====================================================How do you check if a given String is Palindrome or not?===================================
+
+    public static void checktwoStringPalindromeOrNot(){
+        //on reversing first string if they are equal then the both string are palindrome else not
+        String first="abba";
+        String second="abba";
+        if(Stream.of(first.split("")).reduce("",(reversed,character)->character+reversed).equals(second)){
+            System.out.println("Both String are palindrome string");
+        }
+        else  System.out.println("Both String are not palindrome string");
+
+    }
+
+//=======================================================================Remove given char from string======================================================
+
+
+public static void removeGivenCharFromString(){
+        String str="abcdehe";
+        Character c= 'e';
+        System.out.println(Stream.of(str.split("")).filter(x->!String.valueOf(x).equals(String.valueOf(c))).collect(Collectors.joining()));
+
+}
+
+//====================================================Count number of words in a string==========================================================================================
+public static void countNumberOfWordsInString(){
+        String str="how are you";
+        System.out.println(Stream.of(str.split("\\s+")).count());
+}
 
 }
