@@ -111,17 +111,6 @@ Function identity():-  identity is a static method of Function interface that re
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 There is two type of operation in java-8
 1. Intermediate operation
 2. Terminal operation
