@@ -1,0 +1,81 @@
+1. Here requirement of retailer first is:-
+            Please provide all books of class XI and XII
+            Please provide 200 copy and 20 dozen pen and india maps
+
+2. and requirement of retailer second  is:-
+
+            Please provide all books of class VII
+            Please provide 100  copy and 10 dozen pen
+
+since both retailers having all the requirement is diffirent.
+so we should go through interface
+
+
+
+1. Create Interface
+----------------------
+public interface WholeSaler {
+    public void textBooks();
+    public abstract void stationary();
+}
+
+______________________________________________________________
+2.First retailer implementation
+-------------------------------------
+
+package oops.abstraction.interfaceexample;
+
+public class Retailer1 implements WholeSaler{
+    @Override
+    public void textBooks() {
+        System.out.println("Please provide all books of class XI and XII");
+    }
+
+    @Override
+    public void stationary() {
+        System.out.println("Please provide 200 copy and 20 dozen pen and india maps");
+    }
+}
+_________________________________________________________________________
+3.Second retailer implementation
+_______________________
+package oops.abstraction.interfaceexample;
+
+public class Retailer2 implements WholeSaler{
+    @Override
+    public void textBooks() {
+        System.out.println("Please provide all books of class VII");
+    }
+
+    @Override
+    public void stationary() {
+        System.out.println("Please provide 100  copy and 10 dozen pen");
+    }
+}
+______________________________________________________________________________________
+4.Driver class
+_________________________
+package oops.abstraction.interfaceexample;
+
+public class Main {
+    public static void main(String ss[]){
+      WholeSaler retailer1=  new Retailer1();
+      retailer1.textBooks();
+      retailer1.stationary();
+/*
+            output:
+            Please provide all books of class XI and XII
+            Please provide 200 copy and 20 dozen pen and india maps
+*/
+
+        WholeSaler retailer2=  new Retailer2();
+        retailer2.textBooks();
+        retailer2.stationary();
+       /*
+            output:
+              Please provide all books of class VII
+              Please provide 100  copy and 10 dozen pen
+       */
+
+    }
+}

@@ -1,0 +1,83 @@
+Requirement is calculate electricity bill for Domestic and Commercial plan.
+since Domestic rate is different from commercial so setRate() method should be abstract.
+and calculation process is same for both plan so its should be comman for both plan
+So make calculateElectricityBill(Integer unit) concrete method.(non abstract).
+_________________________________________________________________________________________________
+
+1.create Plan abstract class
+____________________________
+
+package oops.abstraction.ElectricityBillExample;
+
+public abstract class Plan {
+    protected Integer rate;
+    public abstract void setRate();// impementing class will set the rate because commercial and domestic rate of unit is different
+
+
+    public void calculateElectricityBill(Integer unit){
+        // It is Concrete class because it is common to both commercial and domestic plan.
+         System.out.println("Your Electricity Bill is "+rate*unit+" Rs.");
+    }
+}
+________________________________________________________________________________________________________________
+2. Create DomesticPlan implementation class.
+_________________________________________________
+
+package oops.abstraction.ElectricityBillExample;
+
+public class DomesticPlan extends Plan {
+    @Override
+    public void setRate() {
+        rate=5;
+    }
+}
+_________________________________________________________________________________________________________
+
+3. Create CommercialPlan implementation class.
+_______________________________________________
+package oops.abstraction.ElectricityBillExample;
+
+public class CommercialPlan extends Plan{
+
+    @Override
+    public void setRate() {
+        rate=10;
+    }
+}
+________________________________________________________________________________________________________
+4. Create a Driver class to see output
+_______________________________________
+
+package oops.abstraction.ElectricityBillExample;
+
+public class DriverClass {
+
+    public static void main(String ss[]){
+
+      Plan domePlan=  new DomesticPlan();
+      domePlan.setRate();
+      System.out.println("Domestic Electricity bill");
+      domePlan.calculateElectricityBill(100);
+        // output :- Your Electricity Bill is 500 Rs.
+
+      Plan commercialPlan =new CommercialPlan();
+      commercialPlan.setRate();
+      System.out.println("Commercial Electricity bill");
+      commercialPlan.calculateElectricityBill(100);
+      // output :- Your Electricity Bill is 1000 Rs.
+
+
+    }
+}
+
+__________________________________________________________________________________________________
+
+/*
+      * here we are calling the same  method calculateElectricityBill(100) for commercial  and domestic
+         and passing same unit=100.
+      * but for domestic getting 500 bill and for commercial getting 1000 bill
+      * how its happening it is because of abstraction, we have hide the implementation of setRate() method  from the driver class
+      * driver class does not know its implementation  it is just creating object and passing units and getting output.
+      *
+      *
+      * */

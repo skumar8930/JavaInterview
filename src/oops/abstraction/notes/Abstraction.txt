@@ -1,0 +1,145 @@
+Abstraction:-
+_____________________
+There may be a lot of data a class contain, and user does not need the entire data.
+the user require only some part of data. in this case  we can hide the unnessary data from
+the user and expose only that data that is the interest of the user.
+this is called abstarction.
+
+A bank clerk should see the customer details like account number , name and balance in the account.
+He should not entitled to see senstive data like staff salary, profit or loss of the bank , interest amount
+paid by the bank and loans amount to be recovered.
+______________________________________________________________________________________________________
+
+Abstraction can be achieved by abstract class or Interface in java.
+
+Abstract Class:-
+____________________
+
+-An abstract class is a class that contains 0 or more abstract method.
+-An abstract method is a method without body(No implementation, only declearation).
+-An abstract method is written when the same method has to perform different task depending on the object calling it.
+-Both abstract class and abstract method should be declared by abstract keywords.
+
+-Since abstract class contains incomplete methods, it is not possible to estimate the total memory required to create
+ the object. So JVM can not create the object of abstract class.
+
+ - We can not create a class abstract and final both because, a abstract class is need subclass to implement its abstract
+   method, and final class can not be extends(can not create sub class).
+ ___  _______________________________________________________________________________________________________________________
+
+Q:- When we should use Abstract class and when to use interface ?
+ ____________________________________________________________
+
+An abstract class contains concrete methods(with implementations) it will be common to all objects.
+An abstract class contains abstract method, it's implemetation will be different for different class implementation.
+
+So we should go for abstract class if some features of objects are common and some features are his won(different) not same.
+Different features are repersented by abstract method.
+And common features are repersented by concrete method.
+
+When all the features of each object totaly different ie. each object having different behaviors,
+ ie.there is no any features are similar in objects then we should go for Interface.
+
+Example:-
+________________________________________________________________________________________________
+
+class WholeSalar{
+
+void textBooks(){
+                // text books of only X class ie. it will be comman to all object
+}
+
+void stationary(); // this can be pens, papers, or note books ie. it may be different to each object depending on his requirement.
+
+}
+_________________________________________________________________________________________________________
+ go for abstract class:-
+ _______________________
+
+So if Each Retaileres want class X only and different stationary, then got for abstract class.
+because textBook is comman to all retailers and stationary is different, so textBook() is cocrete method
+and stationary(); is abstract method.
+
+__________________________________________________________________________________________________________
+go for interface:-
+_________________
+
+If Each Retailer may want different books like some asking for class Vth some XI, some X, and
+different stationary then go for Interface.
+in this case requirement all features of each object is different so we should go for interface.
+
+________________________________________________________________________________________________________________
+
+Practicle:
+______________________________
+
+package oops;
+public  abstract class WholeSaler {
+    public void textBooks(){
+               System.out.println("Class X books");
+    }
+    public abstract void stationary();
+}
+________________________________________________________________________________________________
+package oops;
+
+public class Retailer1 extends WholeSaler{
+    @Override
+    public void stationary() {
+        System.out.println("Pens");
+    }
+}
+____________________________________________________________________________________________________
+package oops;
+
+public class Retailers2 extends WholeSaler{
+    @Override
+    public void stationary() {
+        System.out.println("Note Books");
+    }
+}
+_______________________________________________________________________________________________________
+package oops;
+public class AbstractClassDriver {
+
+    public static void main(String []ss){
+
+        WholeSaler retailer1= new Retailer1();
+        retailer1.textBooks();
+        retailer1.stationary();
+        /*
+        output-:
+        Class X books
+        Pens
+         */
+
+        // second Retailer
+        WholeSaler retailer2= new Retailers2();
+        retailer2.textBooks();
+        retailer2.stationary();
+
+        /*
+           Output:-
+
+          Class X books
+          Note Books
+
+        */
+    }
+}
+________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
