@@ -4,27 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="StringConcepts added">
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/ElectricityBillExample/CommercialPlan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/ElectricityBillExample/DomesticPlan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/ElectricityBillExample/DriverClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/ElectricityBillExample/Plan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/ElectricityBillExample/notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/interfaceexample/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/interfaceexample/Retailer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/interfaceexample/Retailer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/interfaceexample/WholeSaler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/interfaceexample/notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/notes/Abstraction.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/retailerexample/AbstractClassDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/retailerexample/Retailer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/retailerexample/Retailers2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/abstraction/retailerexample/WholeSaler.java" afterDir="false" />
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Abstraction done!">
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/Inheritance_notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/DriverClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/DriverClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/DriverClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/One.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/Three.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/Two.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oops/AbstractionExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oops/EncapsulationExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oops/InheritanceExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oops/PolymorphismExample.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
-    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/91752/Desktop/junit/junit5-4.6.1.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Lombok"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LombokPluginIS_LOMBOK_JPS_FIX_ENABLED&quot;: &quot;true&quot;,
+    &quot;LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/91752/Desktop/junit/junit5-4.6.1.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\91752\IdeaProjects\JavaInterview\src\oops\abstraction\notes" />
@@ -73,7 +66,7 @@
       <recent name="C:\Users\91752\IdeaProjects\JavaInterview\src\oops\notes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DriverClass">
+  <component name="RunManager" selected="Application.oops.Inheritance.shapeExample.DriverClass">
     <configuration name="AbstractClassDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oops.abstraction.retailerexample.AbstractClassDriver" />
       <module name="JavaInterview" />
@@ -100,19 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImmutableClassCuboid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="strings.ImmutableClassCuboid" />
-      <module name="JavaInterview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="strings.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oops.abstraction.interfaceexample.Main" />
       <module name="JavaInterview" />
@@ -126,12 +106,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringConcepts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="strings.StringConcepts" />
+    <configuration name="oops.Inheritance.shapeExample.DriverClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oops.Inheritance.shapeExample.DriverClass" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="strings.*" />
+          <option name="PATTERN" value="oops.Inheritance.shapeExample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="oops.Inheritance.superKeword.DriverClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oops.Inheritance.superKeword.DriverClass" />
+      <module name="JavaInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oops.Inheritance.superKeword.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.oops.Inheritance.shapeExample.DriverClass" />
+        <item itemvalue="Application.oops.Inheritance.superKeword.DriverClass" />
         <item itemvalue="Application.DriverClass" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.AbstractClassDriver" />
-        <item itemvalue="Application.StringConcepts" />
-        <item itemvalue="Application.ImmutableClassCuboid" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692542109078</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Abstraction done!">
+      <created>1693647163564</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693647163569</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,7 +269,8 @@
     <MESSAGE value="String programs added++" />
     <MESSAGE value="String programs moved to java8 package" />
     <MESSAGE value="StringConcepts added" />
-    <option name="LAST_COMMIT_MESSAGE" value="StringConcepts added" />
+    <MESSAGE value="Abstraction done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Abstraction done!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -278,6 +279,11 @@
           <url>file://$PROJECT_DIR$/src/java8/StringPrograms.java</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/oops/Inheritance/superKeword/Three.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

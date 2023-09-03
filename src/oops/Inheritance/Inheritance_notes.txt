@@ -1,0 +1,327 @@
+Inheritance:-
+_________________
+Deriving a new classes from existing classes such that the new classes acquire all the features of existing classes
+is called inheritance.
+we should go for inheritance when some features are already existing in some class and our new requirement
+is some what common as existing , the we should reuse existing istead of creating new again.
+so out development will be easier.
+for eg.
+
+Teacher class:-
+---------------
+class Teacher
+{
+      int id;
+      String name;
+      String address;
+      float saloary;
+      ////getter, setter
+}
+
+Student class:-
+------------------
+class Student
+{
+      int id;
+      String name;
+      String address;
+      int  marks;
+      //getter, setter
+}
+
+----------------------------------------------------------------------------------------------------------------
+here on comparing Teacher and student class we find that id ,name and address(75%) is common in both classes.
+so while developing the Student class, if the programmer decide to reuse the Teacher class code,then Student class
+would become easier.
+---------------------------------------------------------------------------------
+now new version of Student class is below;
+
+class Student extends Teacher
+{
+  int marks;  // since id , name , address are available from teacher class we omit,
+  //seter, getter
+
+}
+--------------------------------------------------------------------------------------------
+so like this creating new class from existing class is called inheritance.
+
+Now  the original class ie. Teacher class is called super or base or parent class and
+newely created class ie. Student class is called subclass or child class.
+
+when a Student class is created it contains, a copy of Teacher class within it ie. Student class contain
+marks as well as id,name ,address , salory (all members of teacher+ all members of Student).
+ie now Student class contains:-
+[( all variable and methods of Student) +  (all variable and methods of Teacher)]
+
+Now both classes having the relation of parent and child.
+_____________________________________________________________________________________________________
+-----------------------------------------------------------------------------------------------------
+
+What is the advantage of inheritance ?
+______________________________________
+In inheritance a programmer reuse the super class code without rewriting it, so developing the classes become
+easy. hence programer and organization productivity is increase, now programmer can deliver more code in less time.
+
+
+_________________________________________________________________________________________________________
+---------------------------------------------------------------------------------------------------------
+
+super keword:-
+-----------------
+1. super keword can be used to refer to sulper class variable
+2. sulper keword can be used to super class method
+3. super keyword can be used to refer super class constructor.
+
+______________________________________________________________________________________________________
+Q.How object of super class created when we created sub class object ?
+
+3. super keyword can be used to refer super class constructor.
+-----------------------------------------------------------------------------------------------------
+1.One Class
+----------------
+package oops.Inheritance.superKeword;
+public class One {
+    One(){
+        System.out.println(" I am from One Constructor");
+    }
+}
+
+_______________________________________________________________________________________________
+2.Two sub class
+------------------
+package oops.Inheritance.superKeword;
+public class Two extends One{
+    Two(){
+          //super() by default
+        System.out.println(" I am from Two Constructor");
+    }
+}
+---------------------------------------------------------------------------------------
+3.Three sub class
+---------------------
+package oops.Inheritance.superKeword;
+
+public class Three extends Two{
+    Three(){
+          //super() by default
+        System.out.println(" I am from Three Constructor");
+    }
+}
+-----------------------------------------------------------------------------------------------------
+Driver class
+---------------
+1. if we create One class object
+--------
+package oops.Inheritance.superKeword;
+public class DriverClass {
+    public static void main(String ss[]){
+       new One();
+    }
+}
+ In this case only One class object will be created.
+ output:-
+ I am from One Constructor.
+ _____________________________________________________________________________________________________
+2.case if we will creat Two class object
+......
+
+ package oops.Inheritance.superKeword;
+ public class DriverClass {
+     public static void main(String ss[]){
+        new Two();
+     }
+ }
+In this case first Two's class default constructor invoked and first line of Two's constructor is by default super().
+so control goes to One class default costructor.
+output.
+------
+I am from One Constructor
+I am from Two Constructor
+---------------------------------------------------------------------------------------------------------------------
+3.case
+------
+
+package oops.Inheritance.superKeword;
+ public class DriverClass {
+     public static void main(String ss[]){
+        new Three();
+     }
+ }
+-------------------------------------------------------------------------------
+in this case
+1. control goes to Three class default constructor
+2.  In first line it find super() by default then goes to Two's constructor
+3. In Two's constructor first line by default supe() so control goes to One class default Constructor
+_____________________________________________________________________________________
+
+so output will be
+-----------------
+I am from One Constructor
+ I am from Two Constructor
+ I am from Three Constructor
+
+ =========================================================================================================
+ To initialize the instance variable we need to pass value from child to parent constructor
+ otherwise we will get error.
+ ______________________________________________________________________________________________
+package oops.Inheritance.superKeword;
+
+public class One {
+      int one;
+      One( int one){
+        this.one=one;
+        System.out.println(" I am from One Constructor value of one is ="+one);
+    }
+}
+
+__________________________________________________________________________________________________________
+
+package oops.Inheritance.superKeword;
+
+public class Two extends One{
+    int two;
+    Two(int one,int two){
+        super(one);// if you will not pass then Ons's object can not be created because it has single argument constructor
+                    // if there is default constructor in Ons's class then there is no need to pass value from child constructor to parant constructor.
+        this.two=two;
+        System.out.println(" I am from Two Constructor Value of two is = "+two);
+    }
+}
+____________________________________________________________________________________________________________
+package oops.Inheritance.superKeword;
+
+public class Three extends Two{
+    Three(int one, int two){
+        super(one, two);
+        System.out.println(" I am from Three Constructor");
+    }
+}
+_______________________________________________________________________________________________________
+package oops.Inheritance.superKeword;
+
+public class DriverClass {
+    public static void main(String ss[]){
+       new Three(10,20);
+
+    }
+}
+
+here we are passing (10,20), values passed from child  constructor to parent constructor
+
+===================================================================================================================
+If there is default constructor in Parent then no need to call from child class constructor
+it is automaticalluy called by child constructor first by super() by default.
+
+____________________________________________________________________________________________________________
+package oops.Inheritance.superKeword;
+public class One {
+     One(){
+        System.out.println(" I am from One Constructor");
+    }
+}
+--------------------------------------------------------------------------------------------------------
+package oops.Inheritance.superKeword;
+public class Two extends One{
+    int two;
+    Two(int two){
+             //super() by default called One's Default constructor
+        this.two=two;
+        System.out.println(" I am from Two Constructor Value of two is = "+two);
+    }
+}
+
+---------------------------------------------------------------------
+
+package oops.Inheritance.superKeword;
+public class Three extends Two{
+    Three(int two){
+        super(two);
+        System.out.println(" I am from Three Constructor");
+    }
+}
+
+here we are passing value from three to two but not from two to one since one having default constructor
+automaticaly called by two's super();
+=============================================================================================================
+
+1. super keword can be used to refer to sulper class variable
+2. sulper keword can be used to super class method
+--------------------------------------------------------------------------------------
+
+package oops.Inheritance.superKeword;
+public class One {
+    int i;
+     One( int i){
+         this.i=i;
+        System.out.println(" I am from One Constructor value of one is =");
+    }
+    public void show(){
+        System.out.println(" I am from One  value of i is ="+i);
+    }
+}
+--------------------------------------------------------------------------------------------------------
+package oops.Inheritance.superKeword;
+public class Two extends One{
+    int i;
+    Two(int i, int j){
+        super(i);
+        this.i=j;
+       System.out.println(" I am from Two Constructor Value of two is j ="+i);
+    }
+    public void show(){
+        System.out.println(" I am from two's show method value of i="+super.i);
+    }
+}
+-------------------------------------------------------------------------------------------
+package oops.Inheritance.superKeword;
+public class Three extends Two{
+    Three(int i, int j){
+        super(i,j);
+        System.out.println(" I am from Three Constructor");
+    }
+    public void show(){
+        System.out.println(" I am from three show method");
+        super.show();
+    }
+}
+
+package oops.Inheritance.superKeword;
+public class DriverClass {
+    public static void main(String ss[]){
+    Three  three =   new Three(10,20);
+    three.show();
+
+    }
+}
+Here we are passing  i=10 and j=20,ie. Three(10,20) form driver class,
+in three's class it passes to two's super(10,20)
+form two's we have pass value of i to one's class
+now we are using value of i in two's show method by super.i, if we will use two's i variable it has value of j so
+it will be incorrect;
+in three we have show() method in show method we have call super.show() because Three's show method is available by default
+in Three's reference. we want to use two's show method.
+
+=================================================================================================================
+Note:-
+---------
+in inheritance value is passed from child to parant by using constructor and Parent object created first then child
+because child need to have copy of parant so parant object first created.
+In real world also we have first Parent then child. all the features of parent will copy to child
+if parant exist first.
+
+================================================================================================
+protected member is accessible to its all sub classes example is given in Shape example, length variable is protected so
+it is available in its both Square and Rectangle sub classes.
+private member is accsesible to its class only where it is declared it is not availabe in sub classes.
+======================================================================
+
+
+
+
+
+
+
+
+
+
+
