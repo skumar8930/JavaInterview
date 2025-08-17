@@ -18,23 +18,23 @@ public class StringPrograms {
     public static void  main(String ss[]){
         //System.out.println(maximumOccuringChar("sandeep sandeeppppp pp"));
         //frequencyOfEachChar();
-        //reverseString();
+       // reverseString();
        // reverseEachWordsOfString();
        // checktwoStringPalindromeOrNot();
-       // printDuplicateChar();
+        //printDuplicateChar();
         //removeAllDuplicateChaFromStringWithSpace();
         // removeDuplicatesExceptSpace();
         //removeAllduplicatewordsFromString();
-       // removeGivenCharFromString();
+        //removeGivenCharFromString();
         //checktwoStringAngramorNot();
         //checkOnlyDigitInString();
-       // countNumberOfVowelsAndConsonentInString();
-        countNumberOfWordsInString();
+        //countNumberOfVowelsAndConsonentInString();
+       //countNumberOfWordsInString();
         //printMaximumOccuringCharInString();
-       // printMaximumOccuringWordInString();
-       // frequencyOfEachCharUsingJava8();
-       // frequencyOfEachWord();
-       // removecharsFromFirstWhichPersentInSecondString();
+        //printMaximumOccuringWordInString();
+        //frequencyOfEachCharUsingJava8();
+       //frequencyOfEachWord();
+        //removecharsFromFirstWhichPersentInSecondString();
         //firstNonrepeatingCharInString();
 
     }
@@ -119,8 +119,8 @@ public class StringPrograms {
          * 5.collect by joining.
          *
          * */
-        /*int len = str.length();//len=5  // 5-1=4
-        String reverse= IntStream.range(0, len).map(i -> len - 1 - i).mapToObj(j->str.charAt(j)).map(x->String.valueOf((char)x)).collect(Collectors.joining());
+        /*int lastIndex = str.length()-1;//len=5  // 5-1=4
+        String reverse= IntStream.range(0, len).map(i -> lastIndex - i).mapToObj(j->str.charAt(j)).map(x->String.valueOf((char)x)).collect(Collectors.joining());
         System.out.println(reverse);
 */
 
@@ -175,16 +175,15 @@ public class StringPrograms {
             }
 
         });
-        System.out.println(result);
-     /*   String input="abc zbc xbc";
+
+        /*System.out.println(result);
+        String input="abc zbc xbc";
         String result = "";
         for (int i = 0; i < input.length(); i++) {
-            if(!result.contains(String.valueOf(input.charAt(i)))) {
-                result += String.valueOf(input.charAt(i));
-            }
-            else if(input.charAt(i)==' '){
-                result += String.valueOf(input.charAt(i));
-
+            char individualChar= input.charAt(i);
+            String characterStringValue = String.valueOf(individualChar);
+            if(!result.contains(characterStringValue) || individualChar ==' ') {
+                result += characterStringValue;
             }
         }
         System.out.println(result);*/
@@ -193,6 +192,8 @@ public class StringPrograms {
     public static void removeAllduplicatewordsFromString(){
         String str= "hello how are you   hello you";
        System.out.println(Stream.of(str.split("\\s+")).distinct().collect(Collectors.joining(" ")));
+       //OR
+       // String str2= Stream.of(str.split(" ")).distinct().collect(Collectors.joining(" "));
     }
 
     //============================================================================// How do you check if two strings are anagrams of each other?======================
@@ -244,8 +245,28 @@ public class StringPrograms {
     //=================================================write a program to print maximum occuring char===============================================
     public static void printMaximumOccuringCharInString(){
         String str="abccc   dddd eeeeee";
-       String maxOccuringChar= Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+      // String maxOccuringChar= Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+        String maxOccuringChar=  Stream.of(str.split("")).collect(Collectors.groupingBy(Function.identity(),counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
        System.out.println(maxOccuringChar);
+
+     //   str.split("")
+
+       // Splits the string into an char array
+        // Function.identity method return the function Function<Character, Character> function = Function.identity()
+        // function.apply('a') return 'a' ie. it return input as output
+        // it is similar to x->x this lambda define the apply method ot Function interface
+
+        /*.collect(Collectors.groupingBy(Function.identity(), counting()))
+
+       2. groupingBy(Function.identity(), counting())
+        Groups identical elements together (Function.identity() says "use the element itself as the key").
+        Counts how many times each element appears (counting()).
+
+      3.entrySet().stream() -> Turns the Map into a stream of Map.Entry<String, Long>.
+      4.max(Map.Entry.comparingByValue()) -> Finds the entry with the largest value (highest count).
+
+        */
+
     }
 
     //=================================================write a program to print maximum occuring word===============================================//
@@ -281,8 +302,31 @@ public class StringPrograms {
         String str= "How are you";
         System.out.println(Stream.of(str.split("\\s+")).map(words->new StringBuilder(words).reverse()).collect(Collectors.joining(" ")));
     }
+//OR
+    static void reverseEachWordsOfString(String str){
+        String rev = Stream.of(str.split(" ")).map(StringPrograms::reverse).collect(Collectors.joining(" "));
+        System.out.println(rev);
+        //OR
+        String rev2= Stream.of(str.split(" ")).map(word-> new StringBuilder(word).reverse()).collect(Collectors.joining(" "));
+        System.out.println(rev2);
+        //OR
+        List<StringBuilder> revList = Stream.of(str.split(" ")).map(word-> new StringBuilder(word).reverse()).toList();
+        System.out.println(String.join(" ",revList));
 
-
+    }
+    static String reverse( String str) {
+        char[] arr = str.toCharArray();
+        int i = 0;
+        int j = arr.length - 1;
+        while (i < j) {
+            char temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+        return new String(arr);
+    }
 //=====================================================How do you check if a given String is Palindrome or not?===================================
 
     public static void checktwoStringPalindromeOrNot(){

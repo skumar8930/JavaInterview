@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Abstraction done!">
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/Inheritance_notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/DriverClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/TeacherStudentExample/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/DriverClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/shapeExample/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/DriverClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/One.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/Three.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oops/Inheritance/superKeword/Two.java" afterDir="false" />
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Inheritance done!">
+      <change afterPath="$PROJECT_DIR$/src/java8/CollectorsUse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/InterviewCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/RevisionPractice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java8/interfaces/MyInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/Lambda/LambdaUese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/Lambda/LambdaUese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/StringPrograms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/StringPrograms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/interfaces/PredicateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/interfaces/PredicateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/java-8 notes" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/java-8 notes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/91752/Desktop/junit/junit5-4.6.1.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/91752/IdeaProjects/JavaInterview&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -66,13 +65,13 @@
       <recent name="C:\Users\91752\IdeaProjects\JavaInterview\src\oops\notes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.oops.Inheritance.shapeExample.DriverClass">
-    <configuration name="AbstractClassDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oops.abstraction.retailerexample.AbstractClassDriver" />
+  <component name="RunManager" selected="Application.CollectorsUse">
+    <configuration name="CollectorsUse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.CollectorsUse" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oops.abstraction.retailerexample.*" />
+          <option name="PATTERN" value="java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DriverClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oops.abstraction.ElectricityBillExample.DriverClass" />
+    <configuration name="InterviewCoding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.InterviewCoding" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oops.abstraction.ElectricityBillExample.*" />
+          <option name="PATTERN" value="java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oops.abstraction.interfaceexample.Main" />
+    <configuration name="PracticeOnEmployeeObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.PracticeOnEmployeeObject" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oops.abstraction.interfaceexample.*" />
+          <option name="PATTERN" value="java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="oops.Inheritance.shapeExample.DriverClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oops.Inheritance.shapeExample.DriverClass" />
+    <configuration name="PredicateExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.interfaces.PredicateExample" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oops.Inheritance.shapeExample.*" />
+          <option name="PATTERN" value="java8.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="oops.Inheritance.superKeword.DriverClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oops.Inheritance.superKeword.DriverClass" />
+    <configuration name="RevisionPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.RevisionPractice" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oops.Inheritance.superKeword.*" />
+          <option name="PATTERN" value="java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.oops.Inheritance.shapeExample.DriverClass" />
-        <item itemvalue="Application.oops.Inheritance.superKeword.DriverClass" />
-        <item itemvalue="Application.DriverClass" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AbstractClassDriver" />
+        <item itemvalue="Application.CollectorsUse" />
+        <item itemvalue="Application.RevisionPractice" />
+        <item itemvalue="Application.InterviewCoding" />
+        <item itemvalue="Application.PracticeOnEmployeeObject" />
+        <item itemvalue="Application.PredicateExample" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693647163569</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Inheritance done!">
+      <created>1693720528569</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693720528569</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +276,8 @@
     <MESSAGE value="String programs moved to java8 package" />
     <MESSAGE value="StringConcepts added" />
     <MESSAGE value="Abstraction done!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Abstraction done!" />
+    <MESSAGE value="Inheritance done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inheritance done!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,6 +291,24 @@
           <url>file://$PROJECT_DIR$/src/oops/Inheritance/superKeword/Three.java</url>
           <line>3</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java</url>
+          <line>29</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java8/InterviewCoding.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java8/InterviewCoding.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

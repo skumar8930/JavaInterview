@@ -19,6 +19,7 @@ public class Main {
         LambdaUese.implementsCalculateSquare();
 
         LambdaUese.implementcompareTwoNumber();
+        LambdaUese.useOfMyInterface();
 
 
 

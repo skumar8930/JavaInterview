@@ -1,4 +1,4 @@
-import javax.jnlp.ClipboardService;
+
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -47,12 +47,17 @@ public static  void printAllPrimeNumberFromTheRange(){
 
 }
 
+     //1 is not a prime number.
+     // A number can be classified as a prime number if it has exactly two factors 1 and itself.
+    //ie it is divisible by 1 and itself only.
+     // Since 1 has less than two factors, it is not a prime number.
+     // A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers.
     public static Boolean chechPrime(Integer n) {
     Boolean isPrime=false;
     if (n  <2) {
         isPrime=false;
     } else {
-        for (int j = 2; j < n; j++) {
+        for (int j = 2; j < n; j++) {// if number is divisible by except(1 and itself) then it is not a prime number.
             if (n % j == 0) {
                 isPrime=false;
                 break;

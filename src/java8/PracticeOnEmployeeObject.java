@@ -9,16 +9,24 @@ import java.util.stream.Collectors;
 
 public class PracticeOnEmployeeObject {
     public static void main(String ss[]){
+      System.out.println(  getEmployeeList().stream().filter(e-> e.yearOfJoining==
+                        getEmployeeList().stream().min(Comparator.comparing(Employee::getYearOfJoining)).get().yearOfJoining).findAny());
+
+
         //countOfMaleAndFemaleEmployee();
         //departmentNames();
       //averageAgeOfMaleAndfemaleEmployee();
        //nameOfEmployeeAfter2015();
        // numberOfEmployeeIneachDepartment();
-        //averageSalaryOfEmployeesInEachDepartment();
+       // averageSalaryOfEmployeesInEachDepartment();
         //oldestEmployeesInOrganization();
        // averageAndTotalSalaryOfOrganization();
        // employeeListOfEachDeartment();
         seniorEmp();
+
+
+
+
     }
 
  //1. Find out the count of male and female employees present in the organization?
@@ -32,6 +40,11 @@ public class PracticeOnEmployeeObject {
          //Second way by grouping
         //System.out.println(getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getGender)));
         System.out.println(getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting())));
+
+        getEmployeeList().stream().collect(Collectors.groupingBy(Employee :: getGender, Collectors.counting()))
+                .entrySet().stream().filter(e-> e.getKey().equals("Male")).forEach(System.out::println);
+
+        // grouping result generate a Map with key as gender(Male and Female) and value as counting
     }
 
 
@@ -67,6 +80,12 @@ public class PracticeOnEmployeeObject {
 
        getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting())).entrySet()
                .stream().sorted((a,b)->a.getValue().compareTo(b.getValue())).forEach(System.out::println);
+
+      // getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting())).entrySet()
+        //        .stream().sorted(Comparator.comparing(Map.Entry::getValue)).forEach(System.out::println);
+
+        // getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting())).entrySet()
+           //     .stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
     }
 
     //6. Find out the average salary of each department.
@@ -115,6 +134,15 @@ public static void oldestEmployeesInOrganization(){
     //9. List down the employees of each department.
 
     public static void  employeeListOfEachDeartment(){
+        getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getDepartment)).entrySet()
+                .stream().forEach(
+                        entry -> {
+
+                            System.out.println(entry.getKey()+"=-------------------------------");
+                            entry.getValue().stream().forEach(employee -> System.out.println(employee.name));
+                        });
+
+        ///OR
         getEmployeeList().stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.toList())).entrySet().stream().forEach(entry-> System.out.println("Department "+entry.getKey()+" Employees"+entry.getValue()));
 
 
@@ -123,6 +151,11 @@ public static void oldestEmployeesInOrganization(){
     //10. Find out the height of experienced employees in the organization
 
     public static void seniorEmp() {
+        System.out.println(  getEmployeeList().stream().filter(e-> e.yearOfJoining==
+                getEmployeeList().stream().min(Comparator.comparing(Employee::getYearOfJoining)).get().yearOfJoining).findAny());
+
+//OR
+
         Optional<Employee> seniorEmp = getEmployeeList().stream().sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
           System.out.println(seniorEmp.get());
     }
@@ -153,4 +186,6 @@ public static void oldestEmployeesInOrganization(){
     }
 
 //References https://blog.devgenius.io/java-8-real-time-coding-interview-questions-and-answers-fce01f3c4080
+    //https://blog.devgenius.io/java-8-coding-and-programming-interview-questions-and-answers-62512c44f062
+    //https://anushasp07.medium.com/
 }
