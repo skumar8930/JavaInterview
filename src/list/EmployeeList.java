@@ -14,7 +14,7 @@ public class EmployeeList {
         return Arrays.asList(
 
                 new Employee(203,"Sandeep",30,25000,"CS"),
-                new Employee(206,"Deepak",45,21000,"IT"),
+                new Employee(206,"Sandeep",45,95000,"IT"),
                 new Employee(207,"Amar",23,15000,"ME"),
                 new Employee(208,"Preeti",34,25000,"IT"),
                 new Employee(202,"Nitu",29,25000,"CS"),

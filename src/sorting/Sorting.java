@@ -20,6 +20,8 @@ public class Sorting {
         //employeeList.stream().sorted((e1,e2)->e1.getId().compareTo(e2.getId())).forEach(e->System.out.println(e));
           // we can also print it by method refrences
         employeeList.stream().sorted((e1,e2)->e1.getId().compareTo(e2.getId())).forEach( System.out::println );
+//OR
+        employeeList.stream().sorted(Comparator.comparing(Employee::getId)).forEach( System.out::println );
 
 
        // employeeList.stream().forEach(System.out::println);

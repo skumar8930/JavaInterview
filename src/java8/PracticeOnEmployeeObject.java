@@ -160,6 +160,23 @@ public static void oldestEmployeesInOrganization(){
           System.out.println(seniorEmp.get());
     }
 
+
+    public static  void employeeWithUniqueSalary(){
+
+        // Step 1: Collect unique salaries
+        Set<Double> uniqueSalaries = getEmployeeList().stream()
+                .collect(Collectors.groupingBy(Employee::getSalary, Collectors.counting()))
+                .entrySet().stream()
+                .filter(e -> e.getValue() == 1) // only salaries occurring once
+                .map(Map.Entry::getKey)         // take the salary
+                .collect(Collectors.toSet());   // now we have a Set<Double>
+
+// Step 2: Filter employees whose salary is in that set
+        List<Employee> uniqueSalaryEmployees = getEmployeeList().stream()
+                .filter(emp -> uniqueSalaries.contains(emp.getSalary())) // ✅ Set.contains(double)
+                .toList();
+    }
+
     public static List<Employee> getEmployeeList(){
 
         List<Employee> employeeList = new ArrayList<Employee>();
