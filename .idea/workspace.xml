@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Inheritance done!">
-      <change afterPath="$PROJECT_DIR$/src/java8/CollectorsUse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/InterviewCoding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/RevisionPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java8/interfaces/MyInterface.java" afterDir="false" />
+    <list default="true" id="a17bdcc0-effe-4112-b29e-8aa24e36b702" name="Changes" comment="Practice">
+      <change afterPath="$PROJECT_DIR$/src/datastructure/concepts/Hashing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strings/PatternClassMatcherQuestions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strings/PatternMatchingAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/Lambda/LambdaUese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/Lambda/LambdaUese.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/PracticeOnEmployeeObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/StringPrograms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/StringPrograms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java8/interfaces/PredicateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/interfaces/PredicateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/GroupingExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/GroupingExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/IntegerQuestiosPracticeUsingStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/IntegerQuestiosPracticeUsingStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/RevisionPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/RevisionPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java8/java-8 notes" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/java-8 notes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,7 @@
       <recent name="C:\Users\91752\IdeaProjects\JavaInterview\src\oops\notes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CollectorsUse">
+  <component name="RunManager" selected="Application.PatternClassMatcherQuestions">
     <configuration name="CollectorsUse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java8.CollectorsUse" />
       <module name="JavaInterview" />
@@ -79,8 +75,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterviewCoding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.InterviewCoding" />
+    <configuration name="IntegerQuestiosPracticeUsingStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java8.IntegerQuestiosPracticeUsingStream" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
@@ -92,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PracticeOnEmployeeObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.PracticeOnEmployeeObject" />
+    <configuration name="PatternClassMatcherQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="strings.PatternClassMatcherQuestions" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java8.*" />
+          <option name="PATTERN" value="strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PredicateExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.interfaces.PredicateExample" />
+    <configuration name="PatternMatchingAlgorithms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="strings.PatternMatchingAlgorithms" />
       <module name="JavaInterview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java8.interfaces.*" />
+          <option name="PATTERN" value="strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CollectorsUse" />
+        <item itemvalue="Application.PatternClassMatcherQuestions" />
+        <item itemvalue="Application.PatternMatchingAlgorithms" />
         <item itemvalue="Application.RevisionPractice" />
-        <item itemvalue="Application.InterviewCoding" />
-        <item itemvalue="Application.PracticeOnEmployeeObject" />
-        <item itemvalue="Application.PredicateExample" />
+        <item itemvalue="Application.IntegerQuestiosPracticeUsingStream" />
+        <item itemvalue="Application.CollectorsUse" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693720528569</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Practice">
+      <created>1756098918082</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1756098918082</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +280,8 @@
     <MESSAGE value="StringConcepts added" />
     <MESSAGE value="Abstraction done!" />
     <MESSAGE value="Inheritance done!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inheritance done!" />
+    <MESSAGE value="Practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,6 +313,29 @@
           <url>file://$PROJECT_DIR$/src/java8/InterviewCoding.java</url>
           <line>34</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java8/IntegerQuestiosPracticeUsingStream.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java8/RevisionPractice.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/strings/PatternClassMatcherQuestions.java</url>
+          <line>314</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/strings/PatternClassMatcherQuestions.java</url>
+          <line>637</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

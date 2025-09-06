@@ -1,0 +1,301 @@
+Traditional Searching Methods (Comparison-Based Search):
+In a sequential search, you search through the table one element at a time. You perform comparisons to check if the element matches
+the key you’re looking for. This results in a time complexity of O(n) where n is the number of elements in the table.
+
+In a binary search, the table is sorted, and you repeatedly divide it into halves. Each time, a comparison is made to decide which half to search next,
+ resulting in a time complexity of O(log n).
+
+In binary search trees, a similar process occurs where comparisons guide the search direction (left or right), resulting in an O(log n) complexity if the tree is balanced.
+
+Hashing: A Different Approach to Searching:
+
+Instead of searching sequentially or by dividing the table in half, hashing allows you to calculate the position (index) of the key directly based on its value.
+This is done through a hash function.
+The idea is that when you know the value of a key, you can immediately access its position in the table without any further comparisons.
+This makes the search time O(1), which is an ideal scenario.
+
+Hash Function (h):
+A hash function (denoted h) takes a key and maps it to an index in a table. Ideally, the function should map different keys to different positions in the table.
+This would make it a perfect hash function.The table size must be at least as large as the number of elements being stored to accommodate all possible key mappings.
+For example, if you have a table of size 1,000, and you're storing variables with unique names, you want to ensure the hash function distributes them evenly across the table.
+
+Challenges: Collisions:
+One major problem in hashing is collisions.
+A collision occurs when two different keys map to the same index.
+For example, the strings "abc" and "acb" might both map to the same index, which is a problem that must be handled.
+A hash function that causes no collisions is called a perfect hash function, but designing such a function can be very challenging,
+especially when you don't know the number of elements in advance.
+Trade-Off in Hash Function Design:
+The goal is to design a hash function that minimizes collisions, but without being too computationally expensive.
+Sophisticated hash functions might reduce collisions but could be slower to compute, so there’s a balance to be struck between avoiding collisions and maintaining performance.
+Key Concepts:
+Perfect Hash Function: A hash function that maps each key to a unique position in the table.
+Collision: When two different keys map to the same table index.
+Table Size: The size of the table (array) used for storing hashed keys. It should ideally be large enough to avoid collisions.
+O(1) Time Complexity: The ideal time complexity for a hash search, meaning the position is accessed directly without comparison.
+
+Hash functions are crucial in computer science, particularly for data structures like hash tables. A hash function maps data (e.g., a key) to a position in a table
+(usually an array). The goal of a hash function is to efficiently assign positions, or "buckets," for elements such that searching, inserting, and deleting can be done quickly.
+Explanation of Hash Functions
+Basic Concept:
+A hash function h(key) takes an input (often a string, integer, or another type) and computes an integer index within the range of table positions.
+For a table with m positions, the hash function will assign each item a position between 0 and m-1.
+Perfect Hashing:
+A hash function is perfect if there are no collisions,
+i.e., no two items get mapped to the same position in the table. This is rare and difficult to achieve.
+Number of Hash Functions:
+Number of possible hash functions:
+If you have n items and m positions in the table, and if n ≤ m, the number of ways to assign positions to those n items is m^n.
+This represents the total number of hash functions that could potentially be used.
+Perfect Hash Functions:
+For perfect hashing, where no two elements collide, the number of perfect hash functions is the number of ways the n items can be placed in the m slots without collisions,
+ which is:  𝑚!/(𝑚−𝑛)!
+This is essentially the number of ways to assign distinct positions to n items in m positions.
+In your example, with 50 elements and a 100-cell array, the number of hash functions is 100^50, but only around 10^94 of these are perfect.
+Collisions and Practicality:
+
+Collisions: A collision occurs when two different keys map to the same position in the hash table. This is undesirable because it can slow down operations like searching or inserting.
+
+Perfect Hash Functions: In theory, perfect hash functions exist, but in practice, they are rare and impractical because they can be very complex or difficult to compute. Most hash functions used in practice don’t avoid collisions entirely, but they minimize them or resolve them effectively.
+
+Types of Hash Functions:
+Several different types of hash functions exist, each suited to different applications:
+
+Division Method: Hash a key k by taking the remainder when k is divided by a prime number m. For example, h(k) = k % m.
+
+Multiplication Method: Uses the fractional part of multiplying the key by a constant and then multiplying by m.
+
+Folding Method:
+The key is split into several parts and combined (folded) into a single value.
+Universal Hashing:
+Uses a random function to minimize collisions and ensure a good distribution.
+Perfect Hashing Practicality:
+In real-world systems, perfect hash functions are rarely used because they require specific conditions, such as knowing the keys in advance.
+Instead, a good hash function that minimizes collisions is often sufficient.
+Collision Resolution:
+ In cases where perfect hashing is not possible, techniques like open addressing (e.g., linear probing) or chaining (e.g., using linked lists for each bucket)
+ are employed to manage collisions.
+In your example, where you have 50 elements and 100 positions, generating hash functions that ensure no collisions (i.e., perfect hash functions) is
+ mathematically possible but not very practical for real applications. Even with 100^50 possible hash functions, the vast majority of these would still involve collisions
+ in any practical scenario.
+So, while it's theoretically interesting to know the number of possible perfect hash functions,
+the more important goal in hashing is usually to minimize collisions in a way that's efficient and practical for the problem at hand.
+
+Hashing is a process used to convert an input (or "key") into a fixed-size numerical value (or "hash value") using a hash function.
+The hash value is used to identify the data in a hash table or data structure efficiently.
+The key idea behind hashing is to map data of arbitrary size to a fixed size, often for the purpose of fast lookups, insertions, and deletions.
+Key Concepts in Hashing
+Hash Function:
+A hash function is a function that takes an input (often a string, integer, or another data type) and converts it into a fixed-length value,
+typically a number or a string of characters.
+The output of the hash function is called a hash code or hash value.
+The hash function aims to distribute the hash codes uniformly across the available hash table positions (buckets) to reduce the chances of collisions.
+Hash Table:
+A hash table is a data structure that stores data in an array-like structure, where each item has a corresponding "bucket" or "slot" determined by its hash code.
+When an item is added to the table, the hash function determines the index where it should be stored.
+The main advantage of a hash table is that it allows for fast average-time complexity of O(1) for lookup, insertion, and deletion operations.
+Collision:
+Collision occurs when two different keys hash to the same index or bucket. This is inevitable when multiple items are mapped to the same hash value.
+There are several techniques to handle collisions, including open addressing (where we find the next available slot) and
+chaining (where multiple values are stored in a linked list at the same index).
+How Hashing Works
+Here’s how the hashing process typically works:
+A key is passed through the hash function.
+The hash function generates a hash value (usually an integer).
+The hash value is used as an index to store or retrieve the data from the hash table.
+Example:
+Suppose we have a simple hash function h(x) = x % 10, where x is an integer(key).
+For x = 23, the hash value would be 23 % 10 = 3, so the item would be placed in position 3 in the hash table.
+For x = 13, the hash value would be 13 % 10 = 3, which results in a collision because the same index 3 is already occupied by the key 23.
+Common Hashing Techniques
+Division Method:
+One of the simplest hash functions is the division method. It computes the hash value by taking the remainder when the key is divided by a prime number m.
+Formula: h(k) = k % m, where k is the key, and m is the size of the hash table.
+Multiplication Method:
+This method uses the fractional part of a constant multiplier to compute the hash.
+Formula: h(k) = floor(m * (k * A % 1)), where A is a constant (e.g., A = (sqrt(5) - 1) / 2), and m is the size of the table.
+Cryptographic Hash Functions:
+These are more complex hash functions used for security purposes, like SHA-256. They produce unique, irreversible hash values for different inputs,
+ making them useful for verifying data integrity and storing passwords securely.
+Why Hashing is Useful
+Fast Lookup:
+Hashing allows quick access to data, typically in constant time O(1) for search operations (under the assumption of a good hash function and low collisions).
+Efficient Storage:
+Hashing helps in organizing data in a way that minimizes the storage overhead compared to other data structures like arrays or linked lists.
+Optimized Search:
+It is commonly used in scenarios where fast lookups are required, such as databases, caches, and symbol tables.
+Applications of Hashing
+Hash Tables: For storing key-value pairs in a way that allows quick lookups and efficient data retrieval.
+Caches: To store previously computed values for fast access.
+Cryptography: For securing sensitive information, like passwords or digital signatures.
+Data Integrity: Ensuring that data has not been altered by checking the hash value of a file or message.
+
+Example: Hash Table for Storing Data
+Let’s say we want to store student IDs and names in a hash table. We might use a hash function to map student IDs to table positions.
+If we use the division method and the student ID is 123, the hash function might calculate 123 % 10 = 3, placing the student's name at index 3 in the table.
+Example:
+We want to insert the following student IDs and names into the hash table:
+ID: 123, Name: Alice
+
+ID: 456, Name: Bob
+
+ID: 789, Name: Charlie
+
+ID: 135, Name: David
+
+ID: 246, Name: Eve
+
+We’ll use the hash function h(k) = k % 10 to determine where to store each student.
+
+Step 1: Apply the Hash Function
+
+For each student ID, we compute the hash value using h(k) = k % 10.
+
+For ID 123: 123 % 10 = 3, so Alice is placed at index 3.
+
+For ID 456: 456 % 10 = 6, so Bob is placed at index 6.
+
+For ID 789: 789 % 10 = 9, so Charlie is placed at index 9.
+
+For ID 135: 135 % 10 = 5, so David is placed at index 5.
+
+For ID 246: 246 % 10 = 6, but index 6 is already occupied by Bob, so we’ll need to handle the
+ collision (let's assume we resolve it using linear probing, meaning we move to the next available index).
+Step 2: The Hash Table (After Insertion)
+Here’s the hash table after inserting all the student data:
+Index	0	1	2	3	4	  5	     6	  7	    8	  9
+Data			  Alice		David	Bob	 	    Charlie
+
+Alice is stored at index 3.
+David is stored at index 5.
+Bob is stored at index 6.
+Charlie is stored at index 9.
+Eve’s ID 246 collided with Bob’s ID 456, so Eve will be stored at the next available position, which is index 7.
+Step 3: The Hash Table (With Collision Resolved)
+Here’s how the table looks after Eve is added with linear probing:
+
+Index	0	1	2	3	4	5	6	7	8	9
+Data			Alice	David Bob	Eve		Charlie
+Explanation of the Table
+The hash table is sized to hold 10 elements (0 through 9).
+Each index in the table corresponds to a position where a student's name will be stored based on their student ID.
+When there is a collision (e.g., both Bob and Eve hash to index 6), we resolve it by moving to the next available slot (index 7 in this case).
+Additional Notes:
+If the hash table were large and had many collisions,
+we could use more advanced collision resolution techniques such as chaining (where each index holds a list of items).
+
+==========================================HashMap==========================================================================
+
+A HashMap in Java is part of the java.util package and provides a key-value mapping data structure. It implements the Map interface and allows
+for efficient storage and retrieval of data based on keys. The HashMap uses hashing to store its data, which enables fast lookups, insertions, and deletions.
+
+Key Concepts of HashMap
+Hashing:
+A HashMap uses a hash function to convert keys into hash codes, which are then used to determine where the value is stored in the
+internal data structure (an array of buckets or bins).
+The hash code helps in finding the right position for a given key.
+If two keys have the same hash code, this leads to a collision. A HashMap handles collisions by storing multiple entries in the same bucket.
+Buckets:
+Internally, a HashMap maintains an array of buckets. Each bucket can store multiple entries (key-value pairs) if collisions occur.
+By default, the capacity of the HashMap is 16 with a load factor of 0.75. This means when 75% of the HashMap's capacity is full,
+it will resize (rehash) the internal array to accommodate more elements.
+
+Collision Resolution:
+
+Linked List (before Java 8): In the event of a collision, HashMap stores the collided key-value pairs in a linked list within the same bucket.
+Balanced Tree (Java 8 and above): When the number of collisions in a bucket becomes large (i.e., more than 8 elements), the linked list is converted into a balanced tree (a Red-Black tree), which ensures better performance (O(log n)
+time complexity for operations like get and put).
+Load Factor:
+The load factor determines when the HashMap should resize. By default, it is 0.75, meaning the HashMap will resize when the number of entries exceeds 75% of its current capacity.
+Capacity and Rehashing:
+Capacity is the number of buckets in the HashMap. When the load factor threshold is exceeded, the HashMap will rehash (resize) to a new capacity,
+typically doubling the previous size.
+Time Complexity:
+Average time complexity for get() and put() operations is O(1), assuming a good hash function and few collisions.
+In the worst case, when all keys hash to the same bucket, the time complexity becomes O(n), where n is the number of elements in the map.
+Basic Operations in HashMap
+put(K key, V value):
+Adds a key-value pair to the map. If the key already exists, it updates the value associated with that key.
+get(Object key):
+Retrieves the value associated with the specified key. If the key doesn’t exist, it returns null.
+remove(Object key):
+Removes the entry for the specified key.
+containsKey(Object key):
+Checks whether the HashMap contains the specified key.
+containsValue(Object value):
+Checks whether the HashMap contains the specified value.
+keySet():
+Returns a Set view of all the keys in the map.
+values():
+Returns a Collection view of all the values in the map.
+entrySet():
+Returns a Set view of all the key-value pairs in the map.
+Example of HashMap in Action
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Create a HashMap to store student IDs (Integer) and names (String)
+        HashMap<Integer, String> studentMap = new HashMap<>();
+
+        // Add some entries to the map
+        studentMap.put(101, "Alice");
+        studentMap.put(102, "Bob");
+        studentMap.put(103, "Charlie");
+
+        // Retrieve a value using the key
+        System.out.println("Student with ID 102: " + studentMap.get(102));  // Output: Bob
+
+        // Remove an entry by key
+        studentMap.remove(101); // Removes Alice
+
+        // Check if a key exists
+        if (studentMap.containsKey(103)) {
+            System.out.println("Student with ID 103 exists.");
+        }
+
+        // Iterate over the key-value pairs
+        for (var entry : studentMap.entrySet()) {
+            System.out.println("ID: " + entry.getKey() + ", Name: " + entry.getValue());
+        }
+    }
+}
+
+Output:
+Student with ID 102: Bob
+Student with ID 103 exists.
+ID: 102, Name: Bob
+ID: 103, Name: Charlie
+Important Points
+Null Values:
+A HashMap allows one null key and multiple null values. However, this behavior is different from other Map implementations
+like Hashtable that do not allow null keys or values.
+Thread Safety:
+HashMap is not thread-safe. If you need to use a HashMap in a concurrent environment, consider using ConcurrentHashMap or synchronizing the operations externally.
+Iteration Order:
+The order of elements in a HashMap is not guaranteed to be the same as the order in which elements were inserted.
+If you need a predictable iteration order, use a LinkedHashMap, which maintains insertion order.
+
+Internal Working of HashMap
+================================
+Hashing Process:
+When a key-value pair is added, the key is passed through the hash function, which generates a hash code.
+The hash code is used to find the appropriate bucket (index) in the internal array.
+If multiple keys map to the same bucket (collision), the HashMap resolves this using a linked list or balanced tree (depending on the number of collisions).
+Resizing:
+When the number of entries exceeds the threshold (determined by capacity * load factor), the HashMap is resized.
+The entries are rehashed and redistributed into the new array of larger size.
+Summary
+HashMap provides fast lookup and insertion operations using hashing.
+It handles collisions via techniques like chaining (linked lists or trees).
+Resizing and rehashing help manage the map’s capacity and performance.
+For thread safety, consider using ConcurrentHashMap or synchronizing the map externally.
+HashMap is a powerful and widely used data structure for fast data retrieval, making it an essential part of Java programming.
+
+=======================================================================================================================================================================
+
+
+
+
+
+
